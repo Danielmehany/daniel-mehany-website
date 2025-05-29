@@ -1,233 +1,329 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, Code, Briefcase, GraduationCap } from "lucide-react"
+'use client';
+
 import Link from "next/link"
+import Image from "next/image"
+import { Github, Linkedin, Code2, Database, Cpu, Wrench, Calendar, Building } from "lucide-react"
 
 export default function Component() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-[#1A1A1A] text-white">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 py-6">
+      <header className="fixed w-full z-50 bg-[#1A1A1A]/80 backdrop-blur-sm border-b border-[#333]">
+        <div className="container mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Daniel Mehany</h1>
-            <div className="flex items-center gap-4">
-              <Link href="#about" className="hover:text-gray-600 transition-colors">
+            <Link href="/" className="text-xl font-bold">
+              Daniel<span className="text-[#B388FF]">Mehany</span>
+              <div className="text-sm text-[#999]">Waterloo Mechatronics Engineering Student</div>
+            </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/" className="text-[#999] hover:text-white transition-colors text-sm">
+                Home
+              </Link>
+              <Link href="#about" className="text-[#999] hover:text-white transition-colors text-sm">
                 About
               </Link>
-              <Link href="#experience" className="hover:text-gray-600 transition-colors">
+              <Link href="#experience" className="text-[#999] hover:text-white transition-colors text-sm">
                 Experience
               </Link>
-              <Link href="#contact" className="hover:text-gray-600 transition-colors">
-                Contact
+              <Link href="#projects" className="text-[#999] hover:text-white transition-colors text-sm">
+                Projects
+              </Link>
+              <Link 
+                href="/DMresume7.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#999] hover:text-white transition-colors text-sm"
+              >
+                Resume
+              </Link>
+              <Link 
+                href="#contact" 
+                className="bg-[#222] px-4 py-2 rounded-lg text-white hover:bg-[#333] transition-colors text-sm"
+              >
+                Contact Me
               </Link>
             </div>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6">Daniel Mehany</h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300">Software Developer & Technology Enthusiast</p>
-            <p className="text-lg mb-12 text-gray-400 max-w-2xl mx-auto">
-              Passionate about creating innovative solutions and building exceptional digital experiences.
-            </p>
-            <div className="flex justify-center gap-6">
-              <Link href="https://www.linkedin.com/in/danielmehany/" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-black"
-                >
-                  <Linkedin className="mr-2 h-5 w-5" />
-                  LinkedIn
-                </Button>
-              </Link>
-              <Link href="https://github.com/Danielmehany" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-black"
-                >
-                  <Github className="mr-2 h-5 w-5" />
-                  GitHub
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-4xl font-bold mb-12 text-center">About Me</h3>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-lg mb-6 text-gray-700">
-                  I'm a dedicated software developer with a passion for creating innovative solutions and building
-                  exceptional digital experiences. I enjoy working with modern technologies and am always eager to learn
-                  and grow in the ever-evolving tech landscape.
+      <main>
+        {/* Hero Section */}
+        <section className="min-h-screen pt-32 pb-16 px-6">
+          <div className="container mx-auto">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+              {/* Text Content */}
+              <div className="flex-1 text-center md:text-left">
+                <h1 className="text-4xl md:text-7xl font-bold mb-6">
+                  Hi, I'm <span className="text-[#B388FF]">Daniel Mehany</span>
+                </h1>
+                <h2 className="text-2xl md:text-4xl font-bold mb-6">
+                  Hardware & Embedded Systems Engineer
+                </h2>
+                <p className="text-[#999] text-lg md:text-xl max-w-3xl mb-12 leading-relaxed">
+                  I am an aspiring Hardware and embedded systems engineer with hands-on experience designing and testing embedded hardware. Proven track record building multi-layer STM32 and 555-timer PCBs in Altium, authoring C/C++ firmware for HIL-validated CAN-based HMI dashboards, and optimizing MATLAB automation scripts.
                 </p>
-                <p className="text-lg text-gray-700">
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                  or sharing knowledge with the developer community.
-                </p>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <Code className="h-8 w-8" />
+                <div className="flex justify-center md:justify-start gap-10 md:gap-20 mb-12">
                   <div>
-                    <h4 className="font-semibold">Full-Stack Development</h4>
-                    <p className="text-gray-600">Building end-to-end solutions</p>
+                    <h3 className="text-4xl md:text-5xl font-bold text-[#B388FF] mb-2">2+</h3>
+                    <p className="text-[#999]">Years Experience</p>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl md:text-5xl font-bold text-[#B388FF] mb-2">5+</h3>
+                    <p className="text-[#999]">Major Projects</p>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl md:text-5xl font-bold text-[#B388FF] mb-2">15+</h3>
+                    <p className="text-[#999]">Technical Skills</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <Briefcase className="h-8 w-8" />
-                  <div>
-                    <h4 className="font-semibold">Problem Solving</h4>
-                    <p className="text-gray-600">Creative solutions to complex challenges</p>
-                  </div>
+                <div className="flex justify-center md:justify-start gap-4 mb-12">
+                  <Link 
+                    href="#projects"
+                    className="bg-[#222] px-6 py-3 rounded-lg text-white hover:bg-[#333] transition-colors inline-flex items-center gap-2"
+                  >
+                    View Projects →
+                  </Link>
+                  <Link 
+                    href="/DMresume7.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#222] px-6 py-3 rounded-lg text-white hover:bg-[#333] transition-colors inline-flex items-center gap-2"
+                  >
+                    Resume ↓
+                  </Link>
                 </div>
-                <div className="flex items-center gap-4">
-                  <GraduationCap className="h-8 w-8" />
-                  <div>
-                    <h4 className="font-semibold">Continuous Learning</h4>
-                    <p className="text-gray-600">Always exploring new technologies</p>
-                  </div>
+                <div className="flex justify-center md:justify-start gap-4">
+                  <Link
+                    href="https://github.com/danielmehany"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#999] hover:text-white transition-colors"
+                  >
+                    <Github className="w-6 h-6" />
+                  </Link>
+                  <Link
+                    href="https://linkedin.com/in/danielmehany"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#999] hover:text-white transition-colors"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </Link>
                 </div>
               </div>
+
+              {/* Profile Picture */}
+              <div className="w-48 h-48 md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden border-4 border-[#333] flex-shrink-0 bg-[#222]">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/profilepic.jpg"
+                    alt="Daniel Mehany"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 192px, 400px"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Skills Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-4xl font-bold mb-12 text-center">Skills & Technologies</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 border-gray-200 hover:border-black transition-colors">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-4 text-xl">Frontend</h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>React / Next.js</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind CSS</li>
-                    <li>HTML5 / CSS3</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-gray-200 hover:border-black transition-colors">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-4 text-xl">Backend</h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>Databases</li>
-                    <li>APIs</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-gray-200 hover:border-black transition-colors">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-4 text-xl">Tools</h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>Git / GitHub</li>
-                    <li>VS Code</li>
-                    <li>Docker</li>
-                    <li>Cloud Platforms</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-4xl font-bold mb-12 text-center">Experience</h3>
+        {/* Experience Section */}
+        <section className="py-16" id="experience">
+          <div className="container px-6">
+            <h2 className="text-3xl font-bold mb-12">Experience</h2>
             <div className="space-y-8">
-              <Card className="border-2 border-gray-200">
-                <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <h4 className="text-xl font-semibold">Software Developer</h4>
-                    <span className="text-gray-600">Present</span>
+              <div className="bg-[#222] rounded-xl p-8">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold">Embedded Systems Engineer</h3>
+                    <p className="text-[#999]">Skyjack Inc.</p>
                   </div>
-                  <p className="text-gray-700 mb-4">
-                    Developing innovative software solutions and contributing to various projects using modern
-                    technologies and best practices.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-black text-white text-sm rounded">React</span>
-                    <span className="px-3 py-1 bg-black text-white text-sm rounded">TypeScript</span>
-                    <span className="px-3 py-1 bg-black text-white text-sm rounded">Node.js</span>
+                  <p className="text-[#999]">Jun. 2025 - Apr. 2025</p>
+                </div>
+                <ul className="text-[#999] space-y-2">
+                  <li>• Designed a Simulink-based HMI dashboard to simulate functionality through CAN communication and DBC file decoding</li>
+                  <li>• Supported Hardware-in-the-Loop (HIL) testing by validating controller I/Os using custom dashboard, reducing testing time by 30%</li>
+                  <li>• Created a script to automate data collection from MATLAB simulation graphs, cutting analysis time by 100%</li>
+                  <li>• Optimized over 1,000 lines of MATLAB code for data visualization, resulting in a 20% faster runtime</li>
+                </ul>
+              </div>
+
+              <div className="bg-[#222] rounded-xl p-8">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold">Hardware Design Engineer</h3>
+                    <p className="text-[#999]">Formula Electric</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-[#999]">Sept. 2024 - Present</p>
+                </div>
+                <ul className="text-[#999] space-y-2">
+                  <li>• Designed a PCB in Altium Designer to monitor voltage levels for electrical safety, integrating a 555 timer, LEDs, capacitors, resistors, USB port, and system wiring for amplitude-based flashing indicators</li>
+                  <li>• Supported Formula Electric Race Car electrical system compliance and collaborated in team meetings on progress tracking, troubleshooting, and task planning</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-bold mb-8">Let's Connect</h3>
-            <p className="text-xl mb-12 text-gray-300">
-              I'm always interested in new opportunities and collaborations.
-            </p>
-            <div className="flex justify-center gap-8 mb-12">
-              <Link
-                href="https://www.linkedin.com/in/danielmehany/"
+        {/* Skills Section */}
+        <section className="py-16" id="about">
+          <div className="container px-6">
+            <h2 className="text-3xl font-bold mb-12">Core Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Design & Simulation */}
+              <div className="bg-[#222] rounded-xl p-8 hover:bg-[#2a2a2a] transition-colors">
+                <Wrench className="w-8 h-8 mb-6 text-white" />
+                <h3 className="text-xl font-bold mb-4">Design & Simulation</h3>
+                <p className="text-[#999] leading-relaxed">
+                  Altium Designer, KiCad, Tinkercad, AutoCAD, SolidWorks, MATLAB, Simulink
+                </p>
+              </div>
+
+              {/* Embedded & Control Systems */}
+              <div className="bg-[#222] rounded-xl p-8 hover:bg-[#2a2a2a] transition-colors">
+                <Cpu className="w-8 h-8 mb-6 text-white" />
+                <h3 className="text-xl font-bold mb-4">Embedded & Control Systems</h3>
+                <p className="text-[#999] leading-relaxed">
+                  Hardware-in-the-Loop (HIL), Verilog, ROS 2
+                </p>
+              </div>
+
+              {/* Computer Vision & Data Analysis */}
+              <div className="bg-[#222] rounded-xl p-8 hover:bg-[#2a2a2a] transition-colors">
+                <Database className="w-8 h-8 mb-6 text-white" />
+                <h3 className="text-xl font-bold mb-4">Computer Vision & Data Analysis</h3>
+                <p className="text-[#999] leading-relaxed">
+                  OpenCV, MediaPipe, Control Vision, scikit-learn, Pandas, NumPy
+                </p>
+              </div>
+
+              {/* Programming & Development Tools */}
+              <div className="bg-[#222] rounded-xl p-8 hover:bg-[#2a2a2a] transition-colors">
+                <Code2 className="w-8 h-8 mb-6 text-white" />
+                <h3 className="text-xl font-bold mb-4">Programming & Development</h3>
+                <p className="text-[#999] leading-relaxed">
+                  C++, C, Python, Java, JavaScript, HTML/CSS, SQL, Docker, Node.js, Express.js, Linux, Virtual Machines, Git, GitHub, Jupyter Notebook
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Projects */}
+        <section className="py-16" id="projects">
+          <div className="container px-6">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold">Featured Projects</h2>
+              <Link 
+                href="https://github.com/danielmehany" 
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-lg hover:text-gray-300 transition-colors"
+                className="text-[#B388FF] hover:text-[#B388FF]/80 transition-colors flex items-center gap-2"
               >
-                <Linkedin className="h-6 w-6" />
-                LinkedIn
-              </Link>
-              <Link
-                href="https://github.com/Danielmehany"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-lg hover:text-gray-300 transition-colors"
-              >
-                <Github className="h-6 w-6" />
-                GitHub
-              </Link>
-              <Link
-                href="mailto:daniel@example.com"
-                className="flex items-center gap-3 text-lg hover:text-gray-300 transition-colors"
-              >
-                <Mail className="h-6 w-6" />
-                Email
+                View All →
               </Link>
             </div>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-200">
-              Get In Touch
-            </Button>
-          </div>
-        </div>
-      </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* SketchBot */}
+              <div className="bg-[#111] rounded-xl p-6">
+                <div className="flex gap-8 items-start h-full">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">SketchBot</h3>
+                    <p className="text-[#B388FF] mb-4">10/2024 - 11/2024</p>
+                    <p className="text-[#999] text-lg">A robot capable of creating outlines for engineering sketches using C++ and Robot C.</p>
+                  </div>
+                  <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/image.png"
+                      alt="SketchBot Project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-gray-600">
-            <p>&copy; {new Date().getFullYear()} Daniel Mehany. All rights reserved.</p>
+              {/* BestBudd */}
+              <div className="bg-[#111] rounded-xl p-6">
+                <div className="flex gap-8 items-start h-full">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">BestBudd</h3>
+                    <p className="text-[#B388FF] mb-4">03/2024 - Present</p>
+                    <p className="text-[#999] text-lg">An innovative educational platform using Next.js and Express.js, featuring a modern UI for both teachers and students.</p>
+                  </div>
+                  <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/bestbudd.png"
+                      alt="BestBudd Project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* IMU STM32 Board */}
+              <div className="bg-[#111] rounded-xl p-6">
+                <div className="flex gap-8 items-start h-full">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">IMU STM32 Board</h3>
+                    <p className="text-[#B388FF] mb-4">04/2024</p>
+                    <p className="text-[#999] text-lg">Custom 4-layer PCB with STM32 microcontroller and MPU-6050 accelerometer for motion tracking.</p>
+                  </div>
+                  <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/stm32.png"
+                      alt="IMU STM32 Board Project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* TurtleBot4 Challenge */}
+              <div className="bg-[#111] rounded-xl p-6">
+                <div className="flex gap-8 items-start h-full">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">TurtleBot4 Challenge</h3>
+                    <p className="text-[#B388FF] mb-4">05/2024</p>
+                    <p className="text-[#999] text-lg">Advanced robotics framework using ROS 2 for autonomous navigation and obstacle avoidance.</p>
+                  </div>
+                  <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/turtlebot.png"
+                      alt="TurtleBot4 Challenge Project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Student Exam Score Predictor */}
+              <div className="bg-[#111] rounded-xl p-6">
+                <div className="flex gap-8 items-start h-full">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">Student Exam Score Predictor</h3>
+                    <p className="text-[#B388FF] mb-4">02/2024</p>
+                    <p className="text-[#999] text-lg">Machine learning model analyzing 30,000+ student entries to predict exam performance with high accuracy.</p>
+                  </div>
+                  <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/predictor.png"
+                      alt="Student Exam Score Predictor Project"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
   )
 }
