@@ -147,96 +147,120 @@ export default function Component() {
                 </Link>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Project cards with updated styling */}
-                <div className="bg-[#111] rounded-xl p-6 flex flex-col h-full">
-                  <div className="flex gap-8 items-start h-full">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">SketchBot</h3>
-                      <p className="text-[#2563EB] mb-4">10/2024 - 11/2024</p>
-                      <p className="text-[#999] text-lg">A robot capable of creating outlines for engineering sketches using C++ and Robot C.</p>
-                    </div>
-                    <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/image.png"
-                        alt="SketchBot Project"
-                        fill
-                        className="object-cover"
-                      />
+                {/* SketchBot */}
+                <Link href="/projects/sketchbot" className="group">
+                  <div className="bg-[#111] rounded-xl p-6 hover:bg-[#191919] transition-colors">
+                    <div className="flex gap-8 items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#1D4ED8] transition-colors">SketchBot</h3>
+                        <p className="text-[#1D4ED8] mb-4">10/2024 - 11/2024</p>
+                        <p className="text-[#999] text-lg line-clamp-2">
+                          A robot capable of creating outlines for engineering sketches using C++ and Robot C.
+                        </p>
+                      </div>
+                      <div className="relative w-32 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/image.png"
+                          alt="SketchBot Project"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
-                <div className="bg-[#111] rounded-xl p-6 flex flex-col h-full">
-                  <div className="flex gap-8 items-start h-full">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">BestBudd</h3>
-                      <p className="text-[#2563EB] mb-4">03/2024 - Present</p>
-                      <p className="text-[#999] text-lg">An innovative educational platform using Next.js and Express.js, featuring a modern UI for both teachers and students.</p>
-                    </div>
-                    <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/bestbudd.png"
-                        alt="BestBudd Project"
-                        fill
-                        className="object-cover"
-                      />
+                {/* BestBudd */}
+                <Link href="/projects/bestbudd" className="group">
+                  <div className="bg-[#111] rounded-xl p-6 hover:bg-[#191919] transition-colors">
+                    <div className="flex gap-8 items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#1D4ED8] transition-colors">BestBudd</h3>
+                        <p className="text-[#1D4ED8] mb-4">03/2024 - Present</p>
+                        <p className="text-[#999] text-lg line-clamp-2">
+                          An innovative educational platform using Next.js and Express.js.
+                        </p>
+                      </div>
+                      <div className="relative w-32 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/bestbudd.png"
+                          alt="BestBudd Project"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
-                <div className="bg-[#111] rounded-xl p-6 flex flex-col h-full">
-                  <div className="flex gap-8 items-start h-full">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">IMU STM32 Board</h3>
-                      <p className="text-[#2563EB] mb-4">04/2024</p>
-                      <p className="text-[#999] text-lg">Custom 4-layer PCB with STM32 microcontroller and MPU-6050 accelerometer for motion tracking.</p>
-                    </div>
-                    <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/stm32.png"
-                        alt="IMU STM32 Board Project"
-                        fill
-                        className="object-cover"
-                      />
+                {/* IMU STM32 Board */}
+                <Link href="/projects/imu-stm32" className="group">
+                  <div className="bg-[#111] rounded-xl p-6 hover:bg-[#191919] transition-colors">
+                    <div className="flex gap-8 items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#1D4ED8] transition-colors">IMU STM32 Board</h3>
+                        <p className="text-[#1D4ED8] mb-4">04/2024</p>
+                        <p className="text-[#999] text-lg line-clamp-2">
+                          Custom 4-layer PCB with STM32 microcontroller and MPU-6050 accelerometer.
+                        </p>
+                      </div>
+                      <div className="relative w-32 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/stm32.png"
+                          alt="IMU STM32 Board Project"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
-                <div className="bg-[#111] rounded-xl p-6 flex flex-col h-full">
-                  <div className="flex gap-8 items-start h-full">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">TurtleBot4 Challenge</h3>
-                      <p className="text-[#2563EB] mb-4">05/2024</p>
-                      <p className="text-[#999] text-lg">Advanced robotics framework using ROS 2 for autonomous navigation and obstacle avoidance.</p>
-                    </div>
-                    <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/turtlebot.png"
-                        alt="TurtleBot4 Challenge Project"
-                        fill
-                        className="object-cover"
-                      />
+                {/* TurtleBot4 Challenge */}
+                <Link href="/projects/turtlebot4" className="group">
+                  <div className="bg-[#111] rounded-xl p-6 hover:bg-[#191919] transition-colors">
+                    <div className="flex gap-8 items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#1D4ED8] transition-colors">TurtleBot4 Challenge</h3>
+                        <p className="text-[#1D4ED8] mb-4">05/2024</p>
+                        <p className="text-[#999] text-lg line-clamp-2">
+                          Advanced robotics framework using ROS 2 for autonomous navigation.
+                        </p>
+                      </div>
+                      <div className="relative w-32 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/turtlebot.png"
+                          alt="TurtleBot4 Challenge Project"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
-                <div className="bg-[#111] rounded-xl p-6 flex flex-col h-full">
-                  <div className="flex gap-8 items-start h-full">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">Student Exam Score Predictor</h3>
-                      <p className="text-[#2563EB] mb-4">02/2024</p>
-                      <p className="text-[#999] text-lg">Machine learning model analyzing 30,000+ student entries to predict exam performance with high accuracy.</p>
-                    </div>
-                    <div className="relative w-40 aspect-square rounded-lg overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/predictor.png"
-                        alt="Student Exam Score Predictor Project"
-                        fill
-                        className="object-cover"
-                      />
+                {/* Student Exam Score Predictor */}
+                <Link href="/projects/exam-predictor" className="group">
+                  <div className="bg-[#111] rounded-xl p-6 hover:bg-[#191919] transition-colors">
+                    <div className="flex gap-8 items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#1D4ED8] transition-colors">Student Exam Score Predictor</h3>
+                        <p className="text-[#1D4ED8] mb-4">02/2024</p>
+                        <p className="text-[#999] text-lg line-clamp-2">
+                          Machine learning model analyzing student data to predict exam performance.
+                        </p>
+                      </div>
+                      <div className="relative w-32 aspect-square rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/predictor.png"
+                          alt="Student Exam Score Predictor Project"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
