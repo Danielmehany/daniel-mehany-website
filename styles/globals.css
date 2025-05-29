@@ -12,7 +12,8 @@
 }
 
 .container {
-  @apply max-w-[1400px] mx-auto;
+  @apply max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  width: min(100%, calc(100vw - 2rem));
 }
 
 @layer utilities {
