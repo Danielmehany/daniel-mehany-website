@@ -30,7 +30,7 @@ export default function Component() {
                   Projects
                 </Link>
                 <Link 
-                  href="/DMresume7.pdf" 
+                  href="/Daniel_Mehany_Resume.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#999] hover:text-white transition-colors text-sm"
@@ -65,6 +65,7 @@ export default function Component() {
                 <p className="text-[#999] text-lg md:text-xl max-w-3xl mb-12 leading-relaxed">
                   I am an aspiring Hardware and embedded systems engineer with hands-on experience designing and testing embedded hardware. Proven track record building multi-layer STM32 and 555-timer PCBs in Altium, authoring C/C++ firmware for HIL-validated CAN-based HMI dashboards, and optimizing MATLAB automation scripts.
                 </p>
+
                 <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10 lg:gap-20 mb-12">
                   <div>
                     <h3 className="text-4xl md:text-5xl font-bold text-[#1D4ED8] mb-2">2+</h3>
@@ -87,7 +88,7 @@ export default function Component() {
                     View Projects →
                   </Link>
                   <Link 
-                    href="/DMresume7.pdf"
+                    href="/Daniel_Mehany_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#222] px-6 py-3 rounded-lg text-white hover:bg-[#333] transition-colors inline-flex items-center gap-2"
